@@ -1,0 +1,470 @@
+
+
+// Variables
+$h-stack: Helvetica, sans-serif
+$p-stack: Domine, serif
+$dark-text: #404040
+$light-text: #969696
+$light-grey: #efefef
+$red: #C65252
+$green: #99AB44
+$blue: #396180
+
+// Resets and basic typography
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+
+h1, h2, h3, h4, h5, blockquote
+  font-family: $h-stack
+  color: $dark-text
+
+p, figcaption, li
+  font-family: $p-stack
+  color: $light-text
+
+  a
+    text-decoration: none
+    border-bottom: 1px dotted #61b9ff
+    font-family: $p-stack
+    color: #61b9ff
+
+// ///////////////////////
+// The mobile-first layout
+// ///////////////////////
+
+// The navigation and its animations
+nav.societies
+  ul
+    li:nth-of-type(1)
+      transform: scale(1.07)
+      font-weight: 700
+nav.sports
+  ul
+    li:nth-of-type(2)
+      transform: scale(1.07)
+      font-weight: 700
+nav.media
+  ul
+    li:nth-of-type(3)
+      transform: scale(1.07)
+      font-weight: 700
+nav.money
+  ul
+    li:nth-of-type(4)
+      transform: scale(1.07)
+      font-weight: 700
+nav.reps
+  ul
+    li:nth-of-type(5)
+      transform: scale(1.07)
+      font-weight: 700
+nav.advice
+  ul
+    li:nth-of-type(6)
+      transform: scale(1.07)
+      font-weight: 700
+nav.freshers
+  ul
+    li:nth-of-type(7)
+      transform: scale(1.07)
+      font-weight: 700
+nav.fans
+  ul
+    li:nth-of-type(8)
+      transform: scale(1.07)
+      font-weight: 700
+
+nav
+  display: none
+  width: calc(100%/6)
+  padding-left: 20px
+  transition: 0.4s
+  // Initial hidden value for the nav
+  left: -200px
+  // mix-blend-mode: difference
+  z-index: 3
+  h5
+    font-size: 2em
+  ul
+    list-style-type: none
+    margin-top: 20px
+    li
+      font-family: $p-stack
+      transition: 0.2s
+      margin: 2px 0px
+      a
+        color: $light-text
+        border-bottom: none
+    li:hover
+      cursor: pointer
+      transform: scale(1.07)
+      font-weight: 700
+nav.inverted
+  h5
+    color: #ffffff
+  ul
+    li
+      font-family: $p-stack
+      color: $light-grey
+      a
+        color: $light-grey
+        border-bottom: none
+
+
+// The header section
+header
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  // An absolutely positioned holder for the background-image
+  section.image
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-size: cover
+    background-position: center
+    z-index: 1
+    filter: grayscale(1)
+    // The darkened section containing the text
+  section.pane
+    background-color: rgba(0,0,0,0.75)
+    color: #ffffff
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 2
+    padding: 40px 20px
+    h2
+      font-size: 3em
+      color: #ffffff
+    hr
+      width: 50px
+      border: 4px solid #ffffff
+      margin: 30px 0px
+    p
+      font-size: 1em
+      color: #ffffff
+
+
+
+// The header section
+footer
+  width: 100%
+  height: 100vh
+  position: relative
+  // An absolutely positioned holder for the background-image
+  section.image
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-size: cover
+    background-position: center
+    z-index: 1
+    // The darkened section containing the text
+  section.pane
+    background-color: rgba(0,0,0,0.5)
+    color: #ffffff
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 2
+    padding: 40px 20px
+    h3
+      font-size: 3em
+      color: #ffffff
+    hr
+      width: 50px
+      border: 4px solid #ffffff
+      margin: 30px 0px
+    p
+      font-size: 1em
+      color: #ffffff
+
+
+
+
+
+
+
+// The body sections of the report
+article.color
+  // For sections with a dark bg, make the text stand out
+  color: #ffffff
+  aside.intro
+    h2
+      color: #ffffff
+    p
+      color: $light-grey
+  aside.stats
+    h3
+      color: #ffffff
+      border-color: $light-grey
+    p
+      color: $light-grey
+    svg
+      margin-top: 10px
+    figure
+      span
+        color: #ffffff
+      figcaption
+        color: $light-grey
+    figure.stacked
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-right: auto
+      width: 50%
+      figcaption, span
+        text-align: left
+article
+  color: $dark-text
+  overflow: hidden
+  position: relative
+  section
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-size: cover
+    background-position: center
+    z-index: 0
+    filter: brightness(1) contrast(0.1) grayscale(1)
+    mix-blend-mode: luminosity
+  // The left-hand introduction with the section title and lede
+  aside.intro
+    padding: 20px
+    z-index: 999
+    h2
+      font-size: 3em
+      margin-bottom: 20px
+  // The right-hand section with the
+  aside.stats
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    z-index: 2
+    h3
+      font-size: 0.9em
+      padding-bottom: 5px
+      margin: 20px 0px
+      border-bottom: 3px solid $dark-text
+      width: 100%
+    p
+      font-size: 0.8em
+      font-family: $h-stack
+      font-weight: 700
+      width: 100%
+      margin: 5px 0px
+    // A number/caption pair
+    figure
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: left
+      span
+        font-size: 4em
+        font-family: $h-stack
+        font-weight: 700
+        margin: 10px
+        flex: 0 1
+      // For big (2 or 1 digit) numbers
+      span.big
+        font-size: 6em
+      figcaption
+        margin: 10px
+    // Fix the display of every other figure
+    figure:nth-of-type(even)
+      figcaption
+        text-align: right
+    img
+      width: 100%
+      margin: 10px 0px
+
+
+// Section-specific styling
+article#sports
+  background-color: $green
+  img:first-of-type
+    width: 70%
+  img:last-of-type
+    margin-bottom: -80px
+    margin-top: -20px
+    width: 60%
+article#media
+  background-color: $red
+  img
+    width: 50%
+  img:last-of-type
+    margin-bottom: -20%
+    width: 40%
+article#money
+  background-color: $blue
+article#reps
+  img
+    width: 70%
+article#advice
+  background-color: $red
+  div.post-its
+    div.post-it:hover
+      transform: scale(1.05) rotate(4deg)
+    div.post-it
+      width: calc(50% - 10px)
+      border: 3px solid #ffffff
+      padding: 20px 20px 50px 20px
+      margin-bottom: 20px
+      border-radius: 3px
+      font-family: $p-stack
+      color: $light-grey
+      font-style: italic
+      font-size: 1.1em
+      background-color: $red
+      transition: 0.2s
+      float: left
+      position: relative
+    // The folder corner effect
+    div.post-it::after
+      content: ""
+      position: absolute
+      bottom: -3px
+      right: -3px
+      height: 0
+      width: 0
+      border-top: 30px solid #ffffff
+      border-right: 30px solid transparent
+    div.post-it::before
+      content: ""
+      position: absolute
+      bottom: -5px
+      right: -5px
+      height: 32px
+      width: 32px
+      background-color: $red
+    div.post-it:nth-of-type(odd)
+      margin-right: 20px
+    div.post-it:last-of-type
+      font-size: 0.9em
+article#freshers
+  background-color: $blue
+  img
+    width: 60%
+  img:nth-of-type(2)
+    width: 30%
+  img:last-of-type
+    width: 25%
+    float: right
+    margin-left: auto
+    margin-top: -60px
+    margin-bottom: -60px
+    margin-right: 5%
+article#fans
+  background-color: $green
+  div.testimonial
+    display: flex
+    flex-direction: row
+    width: 100%
+    margin-bottom: 30px
+    div.text
+      p
+        font-family: $p-stack
+        color: $light-grey
+        font-size: 1em
+        font-weight: 100
+        margin-bottom: 20px
+    div.portrait
+      margin-right: 40px
+      img
+        width: 120px
+        height: 120px
+        border-radius: 120px
+        background-color: #ffffff
+      h5
+        text-align: center
+        color: $light-grey
+
+
+div#advice
+  position: relative
+  div
+    span
+      position: absolute
+      text-align: right
+      text-anchor: right
+      left: -100px
+      margin-top: 15px
+      font-family: $h-stack
+      font-weight: 700
+      font-size: 0.7em
+
+svg#advice
+  g.hover
+    rect
+      fill: rgba(255,255,255,1)
+    text.value
+      opacity: 0.5
+    text.label
+      opacity: 1
+      visibility: visible
+
+
+  g
+    text.value
+      font-family: $h-stack
+      font-weight: 700
+      font-size: 0.8em
+      fill: white
+      text-anchor: middle
+      opacity: 0
+      transition: 0.2s
+    text.label
+      text-anchor: end
+      font-family: $h-stack
+      font-size: 2em
+      font-weight: 700
+      opacity: 0
+      transition: 0.2s
+      visibility: hidden
+
+svg#money
+  text.initial
+    transform: scale(1.2)
+  text.initial.hover
+    opacity: 0.7
+  g.hover
+    text
+      opacity: 1
+    path
+      transform: scale(1.1)
+  g
+    path
+      transition: 0.5s
+    text
+      font-family: $h-stack
+      text-anchor: middle
+      text-align: center
+      fill: #ffffff
+      font-weight: 700
+      opacity: 0
+      transition: 0.5s
+      tspan
+        text-anchor: middle
+        text-align: center
+      tspan:first-of-type
+        font-size: 0.7em
+      tspan:last-of-type
+        font-size: 2.5em
+
+@import 'responsive.sass'
+@import 'animations.sass'

@@ -1,0 +1,29 @@
+{
+  "name": "uwsu-impact-report-2016",
+  "version": "1.0.0",
+  "description": "UWSU's 2016 impact report",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify": "0.0.15",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhackett1/uwsu-impact-report.git"
+  },
+  "author": "Joshua Hackett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhackett1/uwsu-impact-report/issues"
+  },
+  "homepage": "https://github.com/jhackett1/uwsu-impact-report#readme"
+}

@@ -1,0 +1,123 @@
+// First tablet breakpoint
+@media screen and (min-width: 600px)
+  article
+    display: flex
+    flex-direction: row
+    section.image
+      display: block
+    aside
+      width: 50%
+    // Collapse the first column
+    aside:first-of-type
+      width: 0%
+    aside.intro
+      display: flex
+      flex-direction: column
+      justify-content: center
+      position: fixed
+      top: 50%
+      transform: translateY(-50%)
+      left: 0px
+      width: 50%
+      opacity: 0
+      visibility: hidden
+      transition: 0.4s
+    aside.stats
+      margin-left: calc(100%/2)
+
+  article.visible
+    aside.intro
+      opacity: 1
+      visibility: visible
+
+// Desktop breakpoint
+@media screen and (min-width: 900px)
+  header,footer
+    flex-direction: row
+    display: flex
+    section.pane
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 100/5*2%
+      position: relative
+      margin-left: calc(100%/5)
+      h2#title,h3
+        font-size: 5em
+      p
+        font-size: 1.3em
+  nav.navigation
+    display: block
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    left: -200px
+  article
+    display: flex
+    flex-direction: row
+    padding: 40px 0px
+    aside
+      width: 100/5*2%
+    // Collapse the first column
+    aside:first-of-type
+      width: calc(100%/5)
+    aside.intro
+      margin-left: calc(100%/5)
+      width: calc(100%/5*2)
+    aside.stats
+      margin-left: calc(100%/5*2)
+
+//
+// // Big desktop breakpoint
+@media screen and (min-width: 1400px)
+  header,footer
+    section.pane
+      h2#title
+        font-size: 7em
+      p#lede
+        font-size: 1.7em
+        max-width: 550px
+
+  nav.navigation
+    display: block
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    left: -200px
+    margin-left: 15px
+
+    h5
+      font-size: 2.2em
+    ul
+      li
+        font-size: 1.2em
+
+  article
+    aside.intro
+      h2
+        font-size: 4em !important
+      p
+        font-size: 1.2em
+    aside.stats
+      h3
+        font-size: 1em
+      p
+        font-size: 1em
+      figure
+        span
+          font-size: 6em
+        span.big
+          font-size: 7em !important
+        figcaption
+          font-size: 1.3em
+
+  article#advice
+    div.post-its
+      div.post-it
+        font-size: 1.3em !important
+  article#fans
+    div.testimonial
+      div.text
+        p
+          font-size: 1.3em
