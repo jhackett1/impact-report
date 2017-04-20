@@ -1,5 +1,11 @@
+// Responsiveness
 // First tablet breakpoint
 @media screen and (min-width: 600px)
+
+  header
+    section.image
+      background-size: 100%
+
   article
     display: flex
     flex-direction: row
@@ -32,6 +38,11 @@
 
 // Desktop breakpoint
 @media screen and (min-width: 900px)
+
+  header
+    section.image
+      background-size: 50%
+
   header,footer
     flex-direction: row
     display: flex
@@ -52,7 +63,7 @@
     position: fixed
     top: 50%
     transform: translateY(-50%)
-    left: -200px
+    left: -250px
   article
     display: flex
     flex-direction: row
@@ -68,35 +79,20 @@
     aside.stats
       margin-left: calc(100%/5*2)
 
-//
 // // Big desktop breakpoint
 @media screen and (min-width: 1400px)
   header,footer
     section.pane
       h2#title
-        font-size: 7em
+        font-size: 6em
       p#lede
-        font-size: 1.7em
+        font-size: 1.5em
         max-width: 550px
-
-  nav.navigation
-    display: block
-    position: fixed
-    top: 50%
-    transform: translateY(-50%)
-    left: -200px
-    margin-left: 15px
-
-    h5
-      font-size: 2.2em
-    ul
-      li
-        font-size: 1.2em
 
   article
     aside.intro
       h2
-        font-size: 4em !important
+        font-size: 4em
       p
         font-size: 1.2em
     aside.stats
@@ -108,16 +104,30 @@
         span
           font-size: 6em
         span.big
-          font-size: 7em !important
+          font-size: 7em
         figcaption
           font-size: 1.3em
 
   article#advice
     div.post-its
       div.post-it
-        font-size: 1.3em !important
+        font-size: 1.3em
   article#fans
     div.testimonial
       div.text
         p
           font-size: 1.3em
+
+  nav.navigation
+    display: block
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    left: -250px
+    margin-left: 15px
+
+    h5
+      font-size: 2.2em
+    ul
+      li
+        font-size: 1.2em

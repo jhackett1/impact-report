@@ -1,4 +1,4 @@
-
+@import 'animations.sass'
 
 // Variables
 $h-stack: Helvetica, sans-serif
@@ -83,9 +83,10 @@ nav
   padding-left: 20px
   transition: 0.4s
   // Initial hidden value for the nav
-  left: -200px
+  left: -250px
   // mix-blend-mode: difference
   z-index: 3
+  overflow: hidden
   h5
     font-size: 2em
   ul
@@ -129,10 +130,11 @@ header
     background-size: cover
     background-position: center
     z-index: 1
-    filter: grayscale(1)
+    background-color: #C65252
+    background-size: 200%
     // The darkened section containing the text
   section.pane
-    background-color: rgba(0,0,0,0.75)
+    background-color: rgba(0,0,0,0.3)
     color: #ffffff
     position: absolute
     bottom: 0
@@ -170,7 +172,7 @@ footer
     z-index: 1
     // The darkened section containing the text
   section.pane
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.8)
     color: #ffffff
     position: absolute
     bottom: 0
@@ -239,8 +241,8 @@ article
     background-size: cover
     background-position: center
     z-index: 0
-    filter: brightness(1) contrast(0.1) grayscale(1)
-    mix-blend-mode: luminosity
+    filter: contrast(0.3) grayscale(1) blur(2px) 
+    mix-blend-mode: soft-light
   // The left-hand introduction with the section title and lede
   aside.intro
     padding: 20px
@@ -358,6 +360,8 @@ article#advice
       font-size: 0.9em
 article#freshers
   background-color: $blue
+  section
+    filter: blur(2px) grayscale(1) contrast(0.3)
   img
     width: 60%
   img:nth-of-type(2)
@@ -394,7 +398,6 @@ article#fans
         text-align: center
         color: $light-grey
 
-
 div#advice
   position: relative
   div
@@ -409,6 +412,7 @@ div#advice
       font-size: 0.7em
 
 svg#advice
+  background-image: url('../img/pattern.png') !important
   g.hover
     rect
       fill: rgba(255,255,255,1)
@@ -417,8 +421,6 @@ svg#advice
     text.label
       opacity: 1
       visibility: visible
-
-
   g
     text.value
       font-family: $h-stack
@@ -465,6 +467,3 @@ svg#money
         font-size: 0.7em
       tspan:last-of-type
         font-size: 2.5em
-
-@import 'responsive.sass'
-@import 'animations.sass'

@@ -1,0 +1,29 @@
+@keyframes waggle {
+  0% {
+    transform: none; }
+  50% {
+    transform: rotateZ(0deg); }
+  60% {
+    transform: rotateZ(12deg); }
+  67.5% {
+    transform: rotateZ(-8deg); }
+  75% {
+    transform: rotateZ(8deg); }
+  82.5% {
+    transform: rotateZ(-6deg); }
+  85% {
+    transform: rotateZ(0); }
+  100% {
+    transform: rotateZ(0); } }
+
+.waggle:hover {
+  animation-iteration-count: infinite; }
+
+.waggle {
+  animation: 2s ease-in 0s 1 normal both paused waggle; }
+
+img {
+  animation-play-state: paused; }
+
+.animating {
+  animation-play-state: running !important; }

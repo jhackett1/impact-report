@@ -5,8 +5,25 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width", initial-scale="1")
     link(href="css/main.css", rel="stylesheet", type="text/css")
+    link(href="css/responsive.css", rel="stylesheet", type="text/css")
     link(rel="icon", href="http://uwsu.com/wp-content/uploads/2015/07/UWSU-Favicon.png")
     link(href="https://fonts.googleapis.com/css?family=Domine", rel="stylesheet")
+    
+    meta(name="twitter:card",content="summary_large_image")
+    meta(name="twitter:site",content="@WestminsterSU")
+    meta(name="twitter:creator",content="@WestminsterSU")
+    meta(name="twitter:title",content="Our Impact in 2016")
+    meta(name="twitter:description",content="What has UWSU been doing this year? Scoll on to find out.")
+    meta(name="twitter:image",content="http://uwsu.com/impact-report/img/report-social.jpg")
+    
+    meta(property="fb:app_id",content="1134129026651501")
+    meta(property="og:url",content="http://uwsu.com/impact-report")
+    meta(property="og:title",content="Our Impact in 2016")
+    meta(property="og:description",content="What has UWSU been doing this year? Scoll on to find out.")
+    meta(property="og:type",content="article")
+    meta(property="og:image",content="http://uwsu.com/impact-report/img/report-social.jpg")
+    
+    
   body
     //The fixed-position navigation bar, which hides on mobile
     nav.navigation
@@ -30,7 +47,7 @@ html
           a(href="#fans") FANS
     //The full-height header section
     header
-      section.image(style="background-image: url('img/hero.jpg')")
+      section.image(style="background-image: url('img/icons.png')")
       section.pane
         h2#title Our impact in 2016
         hr
@@ -70,7 +87,7 @@ html
         h2 Sports
         p
           | Sport is central to Westminster’s 177 year history. The employability gains are vital, and 
-          a(target="blank", href="http://uwsu.com/varsity") sporting achievements
+          a(target="blank", href="http://uwsu.com/sports") sporting achievements
           |  create strong bonds that last a lifetime.
       aside.stats
         h3 Growth
@@ -105,7 +122,7 @@ html
           figcaption Copies of the QH and Smoke Mag published
         img(src="img/media1.png")
         h3 Broadcast
-        p And Smoke TV and Radio are now producing more, better qulity content than ever before.
+        p And Smoke TV and Radio are now producing more, better quality content than ever before.
         figure
           figcaption Hours of live radio  
           span 3000
@@ -148,6 +165,7 @@ html
           span.big 200
           figcaption Attended specialist training and workshops
     article.color#advice
+      section.image(style="background-image: url('img/advice-hero.jpg')")
       //One column width of margin on the left-hand side
       aside.margin
       aside.intro
@@ -166,6 +184,7 @@ html
           div.post-it I would like to thank you for all the advice - my mitigating circumstances claim has been accepted and I am truly happy.
           div.post-it The mitigating circumstances team have accepted my claim. I can’t express how grateful I am for all your help accumulating the relevant material and submitting the claim for me. I do hope I don’t have to see you again in this capacity, just friendly greetings from now on!
     article.color#freshers
+      section.image(style="background-image: url('img/hero.jpg')")
       //One column width of margin on the left-hand side
       aside.margin
       aside.intro
@@ -195,6 +214,7 @@ html
           span 902
           figcaption Students attended freshers' week events     
     article.color#fans
+      section.image(style="background-image: url('img/fans-hero.jpg')")
       //One column width of margin on the left-hand side
       aside.margin
       aside.intro
